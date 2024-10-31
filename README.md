@@ -2,7 +2,12 @@
 A machine learning model for CRC diagnosis
 
 
-MIT License with Non-Commercial Clause
+The `ColonTrack.rds` file is a machine learning model file built using the R mlr3 package. The trails_data.csv file contains the data used for model training.
+
+
+
+
+# MIT License with Non-Commercial Clause
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
