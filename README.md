@@ -8,7 +8,8 @@ The `ColonTrack.rds` file is a machine learning model file built using the R `ml
 ColonTrack <- readRDS("path/to/ColonTrack.rds")
 trails_data <- read.csv("path/to/trails_data.csv")
 predictions <- predict(ColonTrack, newdata = trails_data)
-
+predictions$confusion
+```
 
 
 # MIT License with Non-Commercial Clause
