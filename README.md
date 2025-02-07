@@ -1,5 +1,5 @@
 # Note
-This model was built using mlr3verse version 0.2.8 and paradox version 0.11.1. Please ensure that the correct versions of these R packages are installed before using the model, as mismatched versions may lead to unforeseen errors.
+This model was built using `mlr3verse` version `0.2.8` and `paradox` version `0.11.1`. Please ensure that the correct versions of these R packages are installed before using the model, as mismatched versions may lead to unforeseen errors.
 # ColonTrack
 A machine learning model for CRC diagnosis
 The model has been trained on extensive clinical ELISA data to achieve high-performance discrimination of colorectal cancer. It shows great potential for early colorectal cancer diagnosis.
