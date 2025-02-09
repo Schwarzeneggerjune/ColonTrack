@@ -18,26 +18,19 @@ trais_data |>
   dplyr::mutate(ColonTrack = predict$prob[, 1])
 ```
 ```
-Sample
-<chr>
-CTTN
-<dbl>
-HNRNPK
-<dbl>
-PSMC6
-<dbl>
-ColonTrack
-<dbl>
-Sample1	0.11	0.00	0.72	0.0093333333
-Sample2	0.13	0.60	0.94	0.0042666667
-Sample3	0.11	1.14	0.56	0.0020000000
-Sample4	0.15	1.65	0.44	0.0056333333
-Sample5	0.26	0.10	0.60	0.0004000000
-Sample6	0.12	0.00	1.23	0.0508333333
-Sample7	2.77	1.86	0.56	0.4271333333
-Sample8	0.13	0.51	0.54	0.0059333333
-Sample9	0.14	0.00	0.92	0.0162095238
-Sample10	0.11	0.62	0.84	0.0000000000
+> trais_data |> 
++     dplyr::mutate(ColonTrack = predict$prob[, 1])
+       Sample   CTTN HNRNPK PSMC6   ColonTrack
+1     Sample1   0.11   0.00  0.72 0.0093333333
+2     Sample2   0.13   0.60  0.94 0.0042666667
+3     Sample3   0.11   1.14  0.56 0.0020000000
+4     Sample4   0.15   1.65  0.44 0.0056333333
+5     Sample5   0.26   0.10  0.60 0.0004000000
+6     Sample6   0.12   0.00  1.23 0.0508333333
+7     Sample7   2.77   1.86  0.56 0.4271333333
+8     Sample8   0.13   0.51  0.54 0.0059333333
+9     Sample9   0.14   0.00  0.92 0.0162095238
+10   Sample10   0.11   0.62  0.84 0.0000000000
 ```
 
 The original ColonTrack model was trained using a dataset from a single center, consisting of 123 `CRC` patients and 118 `non-CRC` controls. Despite the model showing an accuracy greater than 90% in over 800 samples, the limited sample size and single-center origin of the dataset may introduce some bias, and the model may not fully represent the broader characteristics of CRC. Therefore, its generalizability and robustness require further investigation.
