@@ -34,7 +34,7 @@ trais_data |>
 ```
 
 The original ColonTrack model was trained using a dataset from a single center, consisting of 123 `CRC` patients and 118 `non-CRC` controls. Despite the model showing an accuracy greater than 90% in over 800 samples, the limited sample size and single-center origin of the dataset may introduce some bias, and the model may not fully represent the broader characteristics of CRC. Therefore, its generalizability and robustness require further investigation.
-To improve upon this limitation, we trained a new model, ColonTrack-Pro, using ELISA data from four centers, with 521 CRC and 545 non-CRC samples. ColonTrack-Pro is also available for open-source use on GitHub. While this model has not yet been validated with external cohorts, it holds promise for broader diagnostic applications and serves as a valuable reference for future validation efforts.
+To improve upon this limitation, we trained a new model, ColonTrack-Pro, using ELISA data from four centers, with 557 CRC and 545 non-CRC samples. ColonTrack-Pro is also available for open-source use on GitHub. While this model has not yet been validated with external cohorts, it holds promise for broader diagnostic applications and serves as a valuable reference for future validation efforts.
 
 # MIT License with Non-Commercial Clause
 
