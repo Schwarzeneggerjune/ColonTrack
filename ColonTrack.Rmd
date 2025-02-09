@@ -2,12 +2,13 @@
 ```{r}
 library(tidyverse)
 library(mlr3verse)
-ColonTrack = readRDS("~/ColonTrack.rds")
-trais_data = read.csv("~/trails_data.csv")
+ColonTrack = readRDS("~\ColonTrack.rds")
+trais_data = read.csv("~\trails_data.csv")
 
 
 predict = ColonTrack$predict_newdata(newdata = trais_data)
-predict$confusion
-predict$prob
+trais_data |> 
+  dplyr::mutate(ColonTrack = predict$prob[, 1])
+
 ```
 
