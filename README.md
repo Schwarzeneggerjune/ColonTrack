@@ -11,10 +11,34 @@ The `ColonTrack.rds` file is a machine learning model file built using the R `ml
 # R code example
 ColonTrack <- readRDS("path/to/ColonTrack.rds")
 trails_data <- read.csv("path/to/trails_data.csv")
-predictions <- predict(ColonTrack, newdata = trails_data)
-predictions$confusion
-```
 
+
+predict = ColonTrack$predict_newdata(newdata = trais_data)
+trais_data |> 
+  dplyr::mutate(ColonTrack = predict$prob[, 1])
+```
+```
+Sample
+<chr>
+CTTN
+<dbl>
+HNRNPK
+<dbl>
+PSMC6
+<dbl>
+ColonTrack
+<dbl>
+Sample1	0.11	0.00	0.72	0.0093333333
+Sample2	0.13	0.60	0.94	0.0042666667
+Sample3	0.11	1.14	0.56	0.0020000000
+Sample4	0.15	1.65	0.44	0.0056333333
+Sample5	0.26	0.10	0.60	0.0004000000
+Sample6	0.12	0.00	1.23	0.0508333333
+Sample7	2.77	1.86	0.56	0.4271333333
+Sample8	0.13	0.51	0.54	0.0059333333
+Sample9	0.14	0.00	0.92	0.0162095238
+Sample10	0.11	0.62	0.84	0.0000000000
+```
 
 The original ColonTrack model was trained using a dataset from a single center, consisting of 123 `CRC` patients and 118 `non-CRC` controls. Despite the model showing an accuracy greater than 90% in over 800 samples, the limited sample size and single-center origin of the dataset may introduce some bias, and the model may not fully represent the broader characteristics of CRC. Therefore, its generalizability and robustness require further investigation.
 To improve upon this limitation, we trained a new model, ColonTrack-Pro, using ELISA data from four centers, with 521 CRC and 545 non-CRC samples. ColonTrack-Pro is also available for open-source use on GitHub. While this model has not yet been validated with external cohorts, it holds promise for broader diagnostic applications and serves as a valuable reference for future validation efforts.
